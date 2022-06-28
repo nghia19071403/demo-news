@@ -7,53 +7,139 @@
 import UIKit
 
 class ListenViewController: UIViewController {
+    
+
     let layer = CALayer()
     @IBOutlet weak var tapToFlyUp: UIButton!
     @IBOutlet weak var blueView: UIImageView!
     @IBAction func tapToFly(_ sender: Any) {
-        
-        UIView.animateKeyframes(withDuration: 10.0,
-                                        delay: 0,
-                                        options: [],
-                                        animations: {
-                                            
-                                            UIView.addKeyframe(withRelativeStartTime: 0.0,
-                                                               relativeDuration: 0.125,
-                                                               animations: {
-                                                                
-                                                                self.blueView.frame.size.width -= 80
-                                                                self.blueView.frame.size.height -= 80
-                                                                self.blueView.center.x -= 60
-                                            })
-                                            
-                                            UIView.addKeyframe(withRelativeStartTime: 0.125,
-                                                               relativeDuration: 0.25,
-                                                               animations: {
-                                                                
-                                                                self.blueView.center.y -= 120
-                                            })
-                                            
-                                           
-                },
-                                        completion: nil)
-    }
-        
-            
-    }
-func viewDidLoad() {
-        viewDidLoad()
        
+            UIView.animateKeyframes(withDuration: 10.0,
+                                    delay: 0,
+                                    options: [],
+                                    animations: {
+                
+                UIView.addKeyframe(withRelativeStartTime: 0.0,
+                                   relativeDuration: 0.75,
+                                   animations: {
+                    
+                    self.blueView.center.x -= 300
+                })
+                
+                UIView.addKeyframe(withRelativeStartTime: 0.150,
+                                   relativeDuration: 0.125,
+                                   animations: {
+                    
+                    self.blueView.center.y -= 150
+                })
+                UIView.addKeyframe(withRelativeStartTime: 0.2,
+                                   relativeDuration: 0.125,
+                                   animations: {
+                    
+                    self.blueView.center.x = 350
+                })
+                UIView.addKeyframe(withRelativeStartTime: 0.250,
+                                   relativeDuration: 0.125,
+                                   animations: {
+                    
+                    self.blueView.center.y -= 150
+                })
+                UIView.addKeyframe(withRelativeStartTime: 0.3,
+                                   relativeDuration: 0.125,
+                                   animations: {
+                    
+                    self.blueView.center.x -= 300
+                })
+                UIView.addKeyframe(withRelativeStartTime: 0.350,
+                                   relativeDuration: 0.125,
+                                   animations: {
+                    
+                    self.blueView.center.y -= 150
+                })
+                UIView.addKeyframe(withRelativeStartTime: 0.4,
+                                   relativeDuration: 0.125,
+                                   animations: {
+                    
+                    self.blueView.center.x = 350
+                })
+                UIView.addKeyframe(withRelativeStartTime: 0.450,
+                                   relativeDuration: 0.125,
+                                   animations: {
+                    
+                    self.blueView.center.y -= 100
+                })
+                UIView.addKeyframe(withRelativeStartTime: 0.5,
+                                   relativeDuration: 0.125,
+                                   animations: {
+                    
+                    self.blueView.center.x -= 300
+                })
+                UIView.addKeyframe(withRelativeStartTime: 0.550,
+                                   relativeDuration: 0.125,
+                                   animations: {
+                    
+                    self.blueView.center.x = 350
+                })
+                
+                UIView.addKeyframe(withRelativeStartTime: 0.6,
+                                   relativeDuration: 0.125,
+                                   animations: {
+
+                    self.blueView.center.y = 250
+                })
+                UIView.addKeyframe(withRelativeStartTime: 0.650,
+                                   relativeDuration: 0.125,
+                                   animations: {
+
+                    self.blueView.center.x -= 300
+                })
+                UIView.addKeyframe(withRelativeStartTime: 0.7,
+                                   relativeDuration: 0.125,
+                                   animations: {
+
+                    self.blueView.center.y = 350
+                })
+                UIView.addKeyframe(withRelativeStartTime: 0.750,
+                                   relativeDuration: 0.125,
+                                   animations: {
+
+                    self.blueView.center.x = 350
+                })
+                UIView.addKeyframe(withRelativeStartTime: 0.8,
+                                   relativeDuration: 0.125,
+                                   animations: {
+
+                    self.blueView.center.y = 400
+                })
+                UIView.addKeyframe(withRelativeStartTime: 0.850,
+                                   relativeDuration: 0.125,
+                                   animations: {
+
+                    self.blueView.center.x -= 300
+                })
+                UIView.addKeyframe(withRelativeStartTime: 0.9,
+                                   relativeDuration: 0.125,
+                                   animations: {
+
+                    self.blueView.center.y = 700
+                })
+                UIView.addKeyframe(withRelativeStartTime: 0.950,
+                                   relativeDuration: 0.125,
+                                   animations: {
+
+                    self.blueView.center.x = 350
+                })
+                
+            },
+                                    completion: nil)
+        }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+       
+       
+        }
     }
+ 
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-
+  

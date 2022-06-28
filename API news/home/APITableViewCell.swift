@@ -25,7 +25,7 @@ class APITableViewCell: UITableViewCell {
         
         publishedAt.text = data.publishedAt
         
-        let formatter = DateFormatter()
+        let formatter = DateFormatter() 
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
         formatter.timeZone = TimeZone(abbreviation: "IST")
         let result1 = formatter.date(from: data.publishedAt)

@@ -8,10 +8,14 @@
 import UIKit
 
 class FoodTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var topLabel: UILabel!
+    @IBOutlet weak var bopLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

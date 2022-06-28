@@ -8,6 +8,7 @@
 import UIKit
 import CoreData
 
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -15,9 +16,58 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        if #available(iOS 15, *) {
+        
+                        let navigationBarAppearance = UINavigationBarAppearance()
+                        navigationBarAppearance.configureWithOpaqueBackground()
+                        navigationBarAppearance.titleTextAttributes = [
+                            NSAttributedString.Key.foregroundColor : UIColor.white
+                        ]
+//            navigationBarAppearance.backgroundColor = UIColor(red: 197.0 / 255.0, green: 0.0, blue: 62.0 / 255.0, alpha: 1.0)
+          
+                        UINavigationBar.appearance().standardAppearance = navigationBarAppearance
+                        UINavigationBar.appearance().compactAppearance = navigationBarAppearance
+                        UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
+//
+                    let tabBarApperance = UITabBarAppearance()
+                    tabBarApperance.configureWithOpaqueBackground()
+            tabBarApperance.backgroundColor = UIColor.white
+                    UITabBar.appearance().scrollEdgeAppearance = tabBarApperance
+                    UITabBar.appearance().standardAppearance = tabBarApperance
+    }
+    
+//        @available(iOS 10.0, *)
+//            func callNumber() {
+//                if let phoneCallURL = URL(string: "tel://\(0836037661)")
+//                {
+//                    let application:UIApplication = UIApplication.shared
+//                    if (application.canOpenURL(phoneCallURL))
+//                    {
+//                        let alert = UIAlertController(title: "Call", message: "\(0836037661)", preferredStyle: UIAlertController.Style.alert)
+//                        if #available(iOS 10.0, *)
+//                        {
+//                            alert.addAction(UIAlertAction(title: "Call", style: .cancel, handler: { (UIAlertAction) in
+//                                application.open(phoneCallURL, options: [:], completionHandler: nil)
+//                            }))
+//                        }
+//                        else
+//                        {
+//                            alert.addAction(UIAlertAction(title: "Call", style: .cancel, handler: { (UIAlertAction) in
+//                                application.openURL(phoneCallURL)
+//                            }))
+//                        }
+//
+//                        alert.addAction(UIAlertAction(title: "cancel", style: .default, handler: nil))
+//                        self.present(alert, animated: true, completion: nil )
+//                    }
+//                }
+//                else
+//                {
+//                    self.showAlert("Couldn't", message: "Call, cannot open Phone Screen")
+//                }
+//            }
         return true
     }
-
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
@@ -78,4 +128,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
+
 
