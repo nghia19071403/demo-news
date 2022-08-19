@@ -80,7 +80,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section > ListDataSection.allCases.count - 1 {
-            return nil
+            return "nilpresent"
         }
         return ListDataSection.allCases[section].title
     }

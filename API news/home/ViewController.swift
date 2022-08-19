@@ -90,7 +90,7 @@ class ViewController: UIViewController {
     }
 
     private func sendGetRequest(){
-        guard let url = URL(string:"https://newsapi.org/v2/everything?q=tesla&from=2022-05-27&sortBy=publishedAt&apiKey=bd5d88c8396a491bbe0b4ac86e471936")
+        guard let url = URL(string:"https://newsapi.org/v2/everything?q=tesla&from=2022-06-12&sortBy=publishedAt&apiKey=bd5d88c8396a491bbe0b4ac86e471936")
         else {
             return
         }
